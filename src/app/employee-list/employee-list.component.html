@@ -1,0 +1,27 @@
+<h2>Employee List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dni</th>
+            <th>Empleado</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.nombre}}</td>
+            <td>{{employee.apellido}}</td>
+            <td>{{employee.dni}}</td>
+            <td>{{employee.empleado}}</td>
+            <td>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                <button (click)="mployeeDetails(employee.id)" class="btn btn-info" style="margin-left:10px;">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
